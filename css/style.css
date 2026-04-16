@@ -1,0 +1,282 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+background: #f8f9fa;
+color: #333;
+}
+
+.main-container {
+display: flex;
+min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px; 
+  background: rgb(0, 0, 70);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.sidebar .logo {
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+list-style: none;
+width: 100%;
+}
+
+.sidebar nav ul li {
+margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 1.1rem;
+transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+color: #0d6efd;
+}
+
+
+.content {
+  flex: 1;
+  padding: 4rem; 
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.about h1 {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+.about h1 span {
+color: #0d6efd;
+}
+
+.about p {
+margin: 1rem 0 2rem;
+font-size: 1.1rem;
+color: #333;
+}
+
+
+#nombre, #descripcion {
+  max-width: 800px; 
+  line-height: 1.6; 
+}
+.projects .project-card {
+border-radius: 15px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects .project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact form input,
+.contact form textarea {
+width: 100%;
+border-radius: 10px;
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 15px;
+}
+
+.contact button {
+border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+.main-container {
+flex-direction: column;
+}
+
+.sidebar {
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+padding: 1rem;
+position: relative;
+}
+
+.sidebar .logo {
+margin-bottom: 0;
+font-size: 1.5rem;
+}
+
+.content {
+margin-left: 0;
+padding: 1rem;
+}
+
+.about h1 {
+font-size: 2rem;
+text-align: center;
+}
+
+.about p {
+text-align: center;
+}
+
+.projects .row {
+flex-direction: column;
+}
+
+#nombre, #descripcion {
+max-width: 100%;
+text-align: center;
+}
+}
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #007bff;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+
+.profile-img-container {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+
+.profile-img {
+  width: 120px;  
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+
+
+/* Contenedor principal */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* La línea vertical */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #0d6efd; /* Color primario de Bootstrap */
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Alineado a la izquierda */
+  margin-left: -1px;
+}
+
+/* Cada contenedor de evento */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* El círculo en la línea */
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 12px;
+  background-color: #fff;
+  border: 3px solid #0d6efd;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Fecha */
+.timeline-date {
+  font-weight: bold;
+  color: #0d6efd;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Caja de contenido */
+.timeline-content {
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.timeline-content h5 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 10px;
+  }
+}
+
+
